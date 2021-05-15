@@ -1,0 +1,319 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Passion+One:700');
+
+@font-face {
+    font-family: 'digital';
+    src: url('https://dl.dropboxusercontent.com/s/yf8351upkn44ja1/digital-7__mono_.ttf?dl=0');
+}
+
+/*Variables*/
+:root {
+--gameBackground: url(black_plastic.jpg);
+
+--buttonBackground: url(white_plastic.jpg);
+
+--widthHeight: 47%;
+
+--textColor: rgb(37, 34, 34);
+
+}
+
+/*Page background (wood)*/
+
+body {
+  background-image: url(purty_wood.png);
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/*Game body*/
+
+.big_circle {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: var(--gameBackground);
+  background-size: 100%;
+  height: 90vmin;
+  width: 90vmin;
+  justify-content: space-around;
+  align-items: center;
+  padding: .3%;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.75), inset 0px 0px 15px 0px rgba(69,67,69,1);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.75),inset 0px 0px 15px 0px rgba(69,67,69,1);
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75), inset 0px 0px 15px 0px rgba(69,67,69,1);
+}
+
+/*Big game buttons*/
+
+//Green
+.green_layer {
+  background-image: var(--buttonBackground);
+  background-size: 130%;
+  &:focus {
+    outline: none;
+  }
+  height: var(--widthHeight);
+  width: var(--widthHeight);
+  border-top-left-radius: 100%;
+}
+
+.green_button {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 100%;
+  background: rgba(17, 116, 10, .8);
+   &:active {
+    background: rgba(49, 233, 36, .5);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.active_green {
+    background: rgba(49, 233, 36, .5);
+}
+
+//Red
+.red_layer {
+  background-image: var(--buttonBackground);
+  background-size: 130%;
+  &:focus {
+    outline: none;
+  }
+  height: var(--widthHeight);
+  width: var(--widthHeight);
+  border-top-right-radius: 100%;
+}
+
+.red_button {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 100%;
+  background: rgba(179, 19, 19, .8);
+   &:active {
+    background: rgba(238, 66, 32, .6);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.active_red {
+    background: rgba(238, 66, 32, .6);
+}
+
+//Yellow
+.yellow_layer {
+  background-image: var(--buttonBackground);
+  background-size: 130%;
+  &:focus {
+    outline: none;
+  }
+  height: var(--widthHeight);
+  width: var(--widthHeight);
+  border-bottom-left-radius: 100%;
+}
+
+.yellow_button {
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 100%;
+  background: rgba(193, 196, 12, .8);
+   &:active {
+    background: rgba(238, 241, 59, .6);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.active_yellow {
+    background: rgba(238, 241, 59, .6);
+}
+
+//Blue
+.blue_layer {
+  background-image: var(--buttonBackground);
+  background-size: 130%;
+  &:focus {
+    outline: none;
+  }
+  height: var(--widthHeight);
+  width: var(--widthHeight);
+  border-bottom-right-radius: 100%;
+}
+
+.blue_button {
+  height: 100%;
+  width: 100%;
+  border-bottom-right-radius: 100%;
+  background: rgba(22, 17, 150, .8);
+   &:active {
+    background: rgba(65, 60, 235, .6);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.active_blue {
+    background: rgba(65, 60, 235, .6);
+  }
+
+.blue_button, .yellow_button, .red_button, .green_button {
+ -webkit-box-shadow: inset 0px 0px 3px 3px rgba(40,40,40,0.75);
+ -moz-box-shadow: inset 0px 0px 3px 3px rgba(40,40,40,0.75);
+ box-shadow: inset 0px 0px 3px 3px rgba(40,40,40,0.75);
+ border: none;
+  &:active {
+   -webkit-box-shadow: inset 0px 0px 4px 4px rgba(40,40,40,0.75);
+   -moz-box-shadow: inset 0px 0px 4px 4px rgba(40,40,40,0.75);
+   box-shadow: inset 0px 0px 4px 4px rgba(40,40,40,0.75);
+  }
+}
+
+/*Center circle*/
+
+.center_background {
+  display: flex;
+  position: absolute;
+  width: 53%;
+  height: 53%;
+  border-radius: 50%;
+  background-image: var(--gameBackground);
+  background-size: 200%;
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75), 0px 0px 10px 5px rgba(40,40,40,0.75);
+-moz-box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75), 0px 0px 10px 5px rgba(40,40,40,0.75);
+box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75), 0px 0px 10px 5px rgba(40,40,40,0.75);
+}
+
+.center_contents {
+  background-image: url(label.jpg);
+  background-size: 200%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: .1vmin solid black;
+  margin: auto;
+  #title {
+    color: var(--textColor);
+    text-align: center;
+    font-family: 'Passion One', cursive;
+    font-size: 10vmin;
+    margin: 7vh 0 2vh 0;
+  }
+  #on, #off {
+    color: var(--textColor);
+    font-family: 'Passion One', cursive;
+    text-align: center;
+    font-size: 3vmin;
+    margin: 0;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2vmin 0 2vmin;
+}
+
+.score {
+  display: flex;
+  width: 15vmin;
+  height: 10vmin;
+  background-color: black;
+  border-radius: 25%;
+  position: relative;
+}
+
+#score-display {
+  background-color: rgba(124, 3, 7, .5);
+  height: 9vmin;
+  width: 14vmin;
+  text-align: center;
+  color: pink;
+  margin: auto;
+  font-family: 'digital';
+  font-size: 7vmin;
+  border-radius: 25%;
+  line-height: 9vmin;
+}
+
+.strict-indicator {
+  width: 10%;
+  height: 15%;
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  left: 13%;
+  top: 10%;
+  visibility: hidden;
+}
+
+.switch {
+  display: flex;
+  width: 3vmin;
+  height: 10vmin;
+  background-color: rgb(209, 37, 49);
+  flex-direction: column-reverse;
+  align-items: center;
+  border: .2vmin solid black;
+  border-radius: 10%;
+  #on-off-button {
+    height: 4vmin;
+    width: 3vmin;
+    background-color: var(--textColor);
+    border: .1vmin solid black;
+    border-radius: 10%;
+  }
+}
+
+.button-wrapper {
+  margin: 0;
+  font-size: 3vmin;
+  font-family: 'Passion One', cursive;
+  display: flex;
+  flex-wrap: wrap;
+  width: 15vmin;
+  justify-content: space-around;
+  p {
+    margin: 0 .1vmin 0 0;
+  }
+}
+
+.start, .strict {
+  display: inline;
+  height: 5vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  outline: none;
+  
+}
+
+.start {
+  background-color: blue;
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75);
+  -moz-box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75);
+  box-shadow: inset 0px 0px 4px 1px rgba(150,150,150,0.75);
+  &:active {
+    box-shadow: inset 0px 0px 9px 1px rgba(150,150,150,0.75);
+  }
+}
+
+.strict {
+  background-color: yellow;
+  -webkit-box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75);
+  -moz-box-shadow: inset 0px 0px 10px 5px rgba(40,40,40,0.75);
+  box-shadow: inset 0px 0px 4px 1px rgba(40,40,40,0.75);
+  &:active {
+    box-shadow: inset 0px 0px 9px 1px rgba(40,40,40,0.75);
+  }
+}

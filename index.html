@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="big_circle">
+        <div class='green_layer'>
+        <button id='b1' class='green_button green'></button>
+        </div>
+        <div class='red_layer'>
+        <button id='b2' class='red_button red'></button>
+        </div>
+        <div class='yellow_layer'>
+        <button id='b3' class='yellow_button yellow'></button>
+        </div>
+        <div class='blue_layer'>
+        <button id='b4' class='blue_button blue'></button>
+        </div>
+        <div class='center_background'>
+        <div class='center_contents'>
+            <p id='title'>Simone</p>
+            <p id='on'>On</p>
+            <div class='controls'>
+            <div class='score'>
+                <div class='strict-indicator'></div>
+                <p id='score-display'></p>
+            </div>
+            <div class='switch'>     
+                <div id='on-off-button'></div>
+            </div>
+            <div class='button-wrapper'>
+                <p>Start</p>
+                <p>Strict</p>
+                <button class='start'></button>
+                <button class='strict'></button>
+            </div>
+            </div>
+            <p id='off'>Off</p>
+        </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="app.js"></script>
+<audio data-key="green" src="sounds/green.mp3"></audio> 
+<audio data-key="red" src="sounds/red.mp3"></audio> 
+<audio data-key="yellow" src="sounds/yellow.mp3"></audio> 
+<audio data-key="blue" src="sounds/blue.mp3"></audio>
+<audio data-key="wrong" src="sounds/wrong.mp3"></audio>
